@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+body {
+  font-family: Poppins, Helvetica, sans-serif;
+}
+
+.swiper-slide {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  /*opacity: 0.5;
+  transform: scale(0.95);*/
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 25px;
+}
