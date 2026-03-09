@@ -24,7 +24,6 @@ export default function HeroSection() {
             <p className={`${playfair.className} text-lg md:text-xl uppercase tracking-[0.5em] text-gray-400`}>Lash Design</p>
           </div>
 
-          {/* Subtítulo / Descrição */}
           <p className="mt-8 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
             Design de cílios e de sobrancelhas profissional. 
             Realçando a sua beleza natural com elegância e precisão.

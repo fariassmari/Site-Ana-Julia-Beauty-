@@ -17,10 +17,7 @@ export default function Navbar2() {
                 )}
             <nav className="flex items-center justify-between px-12 py-6 w-full text-white border-b border-white/10 backdrop-blur-md bg-black/30">
 
-                <div
-                    className={`fixed top-0 right-0 h-full w-[280px] bg-[#0a0a0a] transform transition-transform duration-300 z-[100] border-l border-white/10
-                    ${aberto ? "translate-x-0" : "translate-x-full"}`}
-                    >
+                <div className={`fixed top-0 right-0 h-full w-[280px] bg-[#0a0a0a] transform transition-transform duration-300 z-[100] border-l border-white/10 ${aberto ? "translate-x-0" : "translate-x-full"}`}>
 
                     <div className="flex justify-end p-8">
                         <button onClick={() => setAberto(false)}>

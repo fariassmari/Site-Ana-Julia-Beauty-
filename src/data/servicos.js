@@ -1,6 +1,7 @@
 const servicos = [
     {
         id: 1,
+        imagem: '/images/Volume-egipcio2.jpeg',
         duracao: '2 horas',
         titulo: 'Volume Egipcio',
         descricao: 'O Volume Egípcio é uma técnica moderna que proporciona efeito volumoso, alinhado e extremamente elegante',
@@ -27,6 +28,7 @@ const servicos = [
 
     {
         id: 3,
+        imagem: '/images/Volume-brasileiro(fio-marrom).jpeg',
         duracao: '2 horas',
         titulo: 'Volume Brasileiro',
         descricao: 'O Volume Egípcio é uma técnica moderna que proporciona efeito volumoso, alinhado e extremamente elegante',
@@ -40,6 +42,7 @@ const servicos = [
 
     {
         id: 4,
+        imagem: '/images/Volume-brasileiro(fio-marrom).jpeg',
         duracao: '2 horas',
         titulo: 'Volume Brasileiro (fio marrom)',
         descricao: 'O Volume Egípcio é uma técnica moderna que proporciona efeito volumoso, alinhado e extremamente elegante',

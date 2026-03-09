@@ -4,8 +4,7 @@ import NavLinks from "./NavLinks";
 export default function Sidebar({ aberto, setAberto }) {
   return (
     <>
-      <div onClick={() => setAberto(false)} className={`fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 z-[100] 
-      ${aberto ? "opacity-100 visible" : "opacity-0 invisible"}`}/>
+      <div onClick={() => setAberto(false)} className={`fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 z-[100] ${aberto ? "opacity-100 visible" : "opacity-0 invisible"}`}/>
 
       <aside className={`fixed top-0 right-0 h-full w-[280px] bg-[#0a0a0a] border-l border-white/10 z-[110] transition-transform duration-300 ease-in-out ${
         aberto ? "translate-x-0" : "translate-x-full"
@@ -18,7 +17,7 @@ export default function Sidebar({ aberto, setAberto }) {
         </div>
 
         <div className="px-8 mt-4">
-          <NavLinks mobile />
+          <NavLinks mobile fecharMenu={() => setAberto(false)} />
         </div>
       </aside>
     </>

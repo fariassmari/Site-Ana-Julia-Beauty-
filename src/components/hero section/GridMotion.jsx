@@ -71,27 +71,13 @@ const GridMotion = ({ items = [], gradientColor = 'black' }) => {
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden">
 
-      <div
-        className="grid gap-2 rotate-[-18deg] scale-125 w-[160vw] h-[160vh]"
-        style={{
-          gridTemplateColumns: "repeat(35, 70px)"
-        }}
-      >
+      <div className="grid gap-2 rotate-[-18deg] scale-125 w-[160vw] h-[160vh]" style={{gridTemplateColumns: "repeat(35, 70px)"}}>
         {repeatedItems.map((item, i) => (
-          <div
-            key={i}
-            className="relative w-full aspect-square overflow-hidden rounded-lg"
-          >
-            <Image
-              src={item}
-              alt="Trabalho de extensão de cílios"
-              fill
-              className="object-cover opacity-40"
-            />
+          <div key={i} className="relative w-full aspect-square overflow-hidden rounded-lg">
+            <Image src={item} alt="Trabalho de extensão de cílios" fill className="object-cover opacity-40" />
           </div>
         ))}
       </div>
-
     </div>
   );
 }
@@ -105,24 +91,14 @@ const GridMotion = ({ items = [], gradientColor = 'black' }) => {
         <div className="absolute inset-0 pointer-events-none z-[4] bg-[length:250px]"></div>
         <div className="gap-4 flex-none relative w-[150vw] h-[150vh] grid grid-rows-4 grid-cols-1 rotate-[-15deg] origin-center z-[2]">
           {[...Array(4)].map((_, rowIndex) => (
-            <div
-              key={rowIndex}
-              className="grid gap-4 grid-cols-7"
-              style={{ willChange: 'transform, filter' }}
-              ref={el => (rowRefs.current[rowIndex] = el)}
-            >
+            <div key={rowIndex} className="grid gap-4 grid-cols-7" style={{ willChange: 'transform, filter' }} ref={el => (rowRefs.current[rowIndex] = el)}>
               {[...Array(7)].map((_, itemIndex) => {
                 const content = combinedItems[rowIndex * 7 + itemIndex];
                 return (
                   <div key={itemIndex} className="relative">
                     <div className="relative w-full h-full overflow-hidden rounded-[10px] bg-[#111] flex items-center justify-center text-white text-[1.5rem]">
                       {typeof content === 'string' ? (
-                        <Image
-                          src={content}
-                          alt="Trabalho de extensão de cílios"
-                          fill
-                          className="object-cover opacity-40"
-                        />
+                        <Image src={content} alt="Trabalho de extensão de cílios" fill className="object-cover opacity-40" />
                       ) : (
                         <div className="p-4 text-center z-[1]">{content}</div>
                       )}

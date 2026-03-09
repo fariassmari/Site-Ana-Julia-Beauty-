@@ -12,7 +12,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50">
       <Sidebar aberto={aberto} setAberto={setAberto} />
 
-      <nav className="flex items-center justify-between px-12 py-6 w-full text-white border-b border-white/10 backdrop-blur-md bg-black/30">
+      <nav className="flex items-center justify-between px-12 py-6 w-full text-white border-b border-white/10 backdrop-blur-md bg-black/50">
         <Image src="/images/logo.png" alt="AJ Lash" width={100} height={40} className="invert object-contain" />
 
         <div className="hidden md:block">
