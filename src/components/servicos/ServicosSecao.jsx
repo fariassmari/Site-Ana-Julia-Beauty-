@@ -13,43 +13,28 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 export default function ServicosSecao(){
     const swiperRef = useRef(null);
     return (
-        <section className="py-16 px-10">
-            <div  className="max-w-[1100px] mx-auto relative px-12">
-                 <button
-                    onClick={() => swiperRef.current?.slidePrev()}
-                    className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 transition cursor-pointer flex items-center justify-center">
+        <section className="py-24 px-10 bg-transparent">
+            <div  className="max-w-[1200px] mx-auto relative px-12">
+                 <button onClick={() => swiperRef.current?.slidePrev()} className="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/5 border border-white/10 text-white hover:bg-yellow-600 hover:border-yellow-600 transition-all cursor-pointer flex items-center justify-center shadow-2xl">
                     <ArrowLeft size={16} />
                 </button>
 
-                {/* Botão próximo */}
-                <button
-                    onClick={() => swiperRef.current?.slideNext()}
-                    className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 transition cursor-pointer flex items-center justify-center">
+                <button onClick={() => swiperRef.current?.slideNext()} className="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/5 border border-white/10 text-white hover:bg-yellow-600 hover:border-yellow-600 transition-all cursor-pointer flex items-center justify-center shadow-2xl">
                     <ArrowRight size={16} />
                 </button>
-                <Swiper
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                    modules={[Pagination, Autoplay]}
-                    spaceBetween={5}
-                    slidesPerView={1.1} 
-                    centeredSlides={false}
-                    loop={true}
-                    navigation={false}
-                    pagination={{ clickable: true }}
-                    autoplay={{ delay: 5000 }}
-                    speed={600}
+                <Swiper onSwiper={(swiper) => (swiperRef.current = swiper)} modules={[Pagination, Autoplay]} spaceBetween={5} slidesPerView={1.1} centeredSlides={false} loop={true} navigation={false} pagination={{ clickable: true }}autoplay={{ delay: 5000 }} speed={600}
                     breakpoints={{
                         768: {
                         slidesPerView: 1.5,
                         },
                         1024: {
-                        slidesPerView: 3.5,
+                        slidesPerView: 2.8,
                         centeredSlides: false,
                         },
                     }}
                 >
                     {servicos.map((servico) => (
-                        <SwiperSlide key={servico.id}>
+                        <SwiperSlide key={servico.id} className="!h-auto">
                             <ServicosCards servicos={servico} />
                         </SwiperSlide>
                     ))}

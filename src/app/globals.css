@@ -6,8 +6,6 @@ body {
 
 .swiper-slide {
   transition: transform 0.4s ease, opacity 0.4s ease;
-  /*opacity: 0.5;
-  transform: scale(0.95);*/
 }
 
 .swiper-slide-active {
@@ -19,3 +17,16 @@ body {
   position: relative !important;
   margin-top: 25px;
 }
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.2) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #E5D3B3 !important; /* Cor Champagne */
+  width: 24px !important; /* Deixa a bolinha ativa mais comprida (estilo moderno) */
+  border-radius: 10px !important;
+  transition: width 0.3s ease;
+}
+
