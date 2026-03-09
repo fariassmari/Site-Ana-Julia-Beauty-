@@ -10,22 +10,22 @@ export default function ServicosCards({ servicos }) {
                 <img src={servicos.imagem} alt={servicos.titulo} className="w-full h-full object-cover" />
             </div>
 
-            <div className="flex-grow">
-                <span className="bg-[#E5D3B3]/10 text-[#E5D3B3] text-[10px] uppercase tracking-[0.3em] px-4 py-1.5 rounded-full border border-[#E5D3B3]/20 font-medium">
+            <div className="flex-grow flex flex-col">
+                <span className="bg-[#E5D3B3]/10 text-[#E5D3B3] text-[10px] uppercase tracking-[0.3em] px-4 py-1.5 rounded-full border border-[#E5D3B3]/20 font-medium w-fit">
                     {servicos.duracao}
                 </span>
 
                 <h2 className="text-2xl text-white mt-5 tracking-tight group-hover:text-[#E5D3B3] transition-colors">{servicos.titulo}</h2>
                 
-                <p className="text-gray-400 text-sm mt-4 leading-relaxed font-light text-justify">{servicos.descricao}</p>
+                <p className="text-gray-400 text-sm mt-4 leading-relaxed font-light text-justify flex-grow">{servicos.descricao}</p>
 
                 <div className="mt-8 space-y-2">
-                    <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                        <span className="text-[10px] text-gray-500 uppercase tracking-widest">Aplicação</span>
+                    <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Aplicação</span>
                         <p className="text-xl font-light text-[#E5D3B3]">R$ {servicos.valorAplicacao}</p>
                     </div>
-                    <div className="flex justify-between items-baseline pt-1">
-                        <span className="text-[10px] text-gray-500 uppercase tracking-widest">Manutenção</span>
+                    <div className="flex justify-between items-center pt-1">
+                        <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Manutenção</span>
                         <p className="text-xl font-light text-[#E5D3B3]">R$ {servicos.valorManutencao}</p>
                     </div>
                 </div>
